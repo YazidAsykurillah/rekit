@@ -1,0 +1,16 @@
+{
+  "name": "plc",
+  "version": "1.0.0",
+  "description": "Aplikasi Komunikasi PLC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bit Maker Automation",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.12.0",
+    "node-snap7": "^0.2.3",
+    "socket.io": "^1.7.1"
+  }
+}

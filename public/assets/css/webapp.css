@@ -1,0 +1,134 @@
+/* 
+    Created on : Jul 18, 2015, 1:16:13 PM
+    Author     : budiir
+*/
+#searchid td {
+    padding: 1px;
+}
+
+.control-label {
+    margin-bottom: 0;
+    padding-top: 7px;
+    text-align: right;
+}
+td select {
+    height:26px;
+}
+
+table.dataTable tbody th.dt-body-center,
+table.dataTable tbody td.dt-body-center,
+th.dt-body-center {
+    text-align: center;
+}
+
+table.dataTable tbody td.dt-body-uang
+{
+    text-align: right;
+}
+th.dt-body-uang {
+    text-align: center;
+}
+
+table.dataTable tbody tr.selected {
+    background-color: #BBDEFB;
+}
+
+table.dataTable tbody tr {
+    cursor: pointer;
+}
+
+.pinggiran {
+    border: 1px #ccc dotted; 
+    padding: 10px;
+}
+
+.mandatory {
+    border-left: 5px #FF7212 solid;
+}
+
+.pinggir-kanan{
+    border-right:1px #ccc dotted;
+}
+
+nav i.fa-plus-square {
+    color : grey;
+}
+
+.blink-me {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+    50% { opacity: 0.0; }
+}
+
+.x-navigation > li.xn-logo > a:first-child {
+    background: #fff !important
+}
+
+.x-navigation li.active > a,.x-navigation li > ul li.active > a {
+    background: #0D0D47;
+}
+
+.x-navigation li > ul li > a:hover,.x-navigation li > a:hover  {
+    background: #0096E0 !important;
+}
+
+.xn-openable.active {
+    border-left: 1px solid red; 
+}
+.x-navigation li.active {
+    border-left: 2px solid red;
+}
+
+li.nav-dropdown.open > a {
+    border-left: 3px #fa0000 solid !important;
+}
+
+.btn .fa, .btn .glyphicon {
+    margin: 0px;
+}
+
+.input-group-addon a  {
+    /*color :#353E50;*/
+    color :#fff;
+}
+
+.profile .profile-image img {
+    width: 80px;
+    border: 3px #ccc solid;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Warna Icon */
+.merah {
+    color:#D9534F;
+}
+
+.biru {
+    color:#337AB7;
+}
+
+.hijau {
+    color:#5CB85C;
+}
+.abugelap {
+    color:#656D78;
+}
+
+.btn.btn-app {
+    position: relative;
+    padding: 15px 5px;
+    margin: 0 0 10px 10px;
+    min-width: 80px;
+    height: 60px;
+    box-shadow: none;
+    border-radius: 0;
+    text-align: center;
+    color: #666;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    font-size: 12px; }
