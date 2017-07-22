@@ -1,26 +1,26 @@
 <?php
 
-class Sv1tohp2 extends BMA_Controller {
+class Sv2tohp1 extends BMA_Controller {
 
     function __construct() {
-        $config = array('modules' => 'cip', 'jsfiles' => array('sv1tohp2'));
+        $config = array('modules' => 'cip', 'jsfiles' => array('sv2tohp1'));
         parent::__construct($config);
         $this->auth = $this->session->userdata('auth');
     }
 
     function index() {
         
-        $data['sv1tohp2s'] = $this->db->select('*')->get('sv1tohp2s')->result();
-        $this->template->title('SV1 to HP2');
+        $data['sv2tohp1s'] = $this->db->select('*')->get('sv2tohp1s')->result();
+        $this->template->title('SV2 to HP1');
         $this->template->set('icon', 'fa fa-gears');
-        $this->template->build('cip/sv1tohp2/index_v', $data);
+        $this->template->build('cip/sv2tohp1/index_v', $data);
     }
 
     public function create()
     {
-        $this->template->title('SV1 to HP2 Create');
+        $this->template->title('Create');
         $this->template->set('icon', 'fa fa-gears');
-        $this->template->build('cip/sv1tohp2/create_v');
+        $this->template->build('cip/sv2tohp1/create_v');
     }
 
     public function store()
@@ -48,8 +48,9 @@ class Sv1tohp2 extends BMA_Controller {
             $data['created_by'] = $this->auth['id'];
             $data['created_at'] = date('Y-m-d H:i:s');
             $data['updated_at'] = date('Y-m-d H:i:s');
-            $store = $this->db->insert('sv1tohp2s', $data);
-            redirect(base_url('cip/sv1tohp2/'));
+            $store = $this->db->insert('sv2tohp1s', $data);
+            
+            redirect(base_url('cip/sv2tohp1/'));
         }
         else{
             exit("Recipe name is empty");
@@ -58,28 +59,28 @@ class Sv1tohp2 extends BMA_Controller {
 
     public function show($id = NULL)
     {
-        $config = array('modules' => 'cip', 'jsfiles' => array('sv1tohp2show'));
+        $config = array('modules' => 'cip', 'jsfiles' => array('sv2tohp1show'));
         parent::__construct($config);
 
         if($id != NULL){
-            $sv1tohp2 = $this->db->get_where('sv1tohp2s', array('id'=>$id ))->result();
-            $data['sv1tohp2'] = $sv1tohp2;
+            $sv2tohp1 = $this->db->get_where('sv2tohp1s', array('id'=>$id ))->result();
+            $data['sv2tohp1'] = $sv2tohp1;
             $this->template->title('Show');
             $this->template->set('icon', 'fa fa-gears');
-            $this->template->build('cip/sv1tohp2/show_v', $data);
+            $this->template->build('cip/sv2tohp1/show_v', $data);
         }
     }
 
     public function edit($id = NULL)
     {
-        $config = array('modules' => 'cip', 'jsfiles' => array('sv1tohp2edit'));
+        $config = array('modules' => 'cip', 'jsfiles' => array('sv2tohp1edit'));
         parent::__construct($config);
         if($id != NULL){
-            $sv1tohp2 = $this->db->get_where('sv1tohp2s', array('id'=>$id ))->result();
-            $data['sv1tohp2'] = $sv1tohp2;
+            $sv2tohp1 = $this->db->get_where('sv2tohp1s', array('id'=>$id ))->result();
+            $data['sv2tohp1'] = $sv2tohp1;
             $this->template->title('Edit');
             $this->template->set('icon', 'fa fa-gears');
-            $this->template->build('cip/sv1tohp2/edit_v', $data);
+            $this->template->build('cip/sv2tohp1/edit_v', $data);
         }
     }
 
@@ -109,10 +110,10 @@ class Sv1tohp2 extends BMA_Controller {
             
             $data['updated_at'] = date('Y-m-d H:i:s');
             $this->db->where('id', $id);
-            $update = $this->db->update('sv1tohp2s', $data);
+            $update = $this->db->update('sv2tohp1s', $data);
             // print_r($update);
             // exit();
-            redirect(base_url('cip/sv1tohp2/'));
+            redirect(base_url('cip/sv2tohp1/'));
         }
         else{
             exit("Recipe name is required");
